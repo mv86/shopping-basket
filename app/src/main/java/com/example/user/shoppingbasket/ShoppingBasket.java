@@ -78,38 +78,10 @@ public class ShoppingBasket {
         return afterDiscount;
     }
 
-    public double roundTo2Decimals(double figueToRound) {
-        double figueRounded = (double) Math.round(figueToRound * 100) / 100;
-        return figueRounded;
+    public double roundTo2Decimals(double figureToRound) {
+        double figureRounded = (double) Math.round(figureToRound * 100) / 100;
+        return figureRounded;
     }
 
-    //    public double basketValue() {
-//        double counter = 0;
-//        ArrayList<Item> bogofArray = new ArrayList<>();
-//        for (Item item : this.basket) {
-//            if (item.getbogof() == true) {
-//                bogofArray.add(item);
-//            }
-//            if (item.getbogof() == false) {
-//                counter += (item.getPrice() * item.getQuantity());
-//            }
-//        }
-//        for (Item item : bogofArray) {
-//            if (item.getQuantity() % 2 == 0) {
-//                double price = (item.getPrice() * item.getQuantity()) / 2;
-//                counter += price;
-//            }
-//            if (item.getQuantity() % 2 != 0) {
-//                double price = (((item.getPrice() * item.getQuantity()) - item.getPrice()) / 2)
-//                        + item.getPrice();
-//                counter += price;
-//            }
-//        }
-//        if (counter > 20) {
-//            counter = (((counter - 20) / 100) * 90) + 20;
-//        }
-//        double counterRounded = (double) Math.round(counter * 100) / 100;
-//        return counterRounded;
-//    }
 
 }
