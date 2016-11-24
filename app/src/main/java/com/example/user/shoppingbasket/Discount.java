@@ -41,12 +41,12 @@ public class Discount {
     }
 
 
-    public double loyaltyCardDiscount(double basketValue) {
-        double beforeDiscount = basketValue;
-        double afterDiscount = (beforeDiscount / 100) * 98;
-        afterDiscount = roundTo2Decimals(afterDiscount);
-        return afterDiscount;
-    }
+//    public double loyaltyCardDiscount(double basketValue) {
+//        double beforeDiscount = basketValue;
+//        double afterDiscount = (beforeDiscount / 100) * 98;
+//        afterDiscount = roundTo2Decimals(afterDiscount);
+//        return afterDiscount;
+//    }
 
     public double roundTo2Decimals(double figureToRound) {
         double figureRounded = (double) Math.round(figureToRound * 100) / 100;
