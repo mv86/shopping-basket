@@ -12,6 +12,7 @@ import static junit.framework.Assert.assertEquals;
 public class ShoppingBasketTest {
 
     ShoppingBasket basket;
+    Discount discounter;
     Item item1;
     Item item2;
     Item item3;
@@ -20,6 +21,7 @@ public class ShoppingBasketTest {
     @Before
     public void before() {
         basket = new ShoppingBasket();
+        discounter = new Discount();
         item1 = new Item("Shirt", 9.99, 3, true);
         item2 = new Item("Bread", 1.29, 2, false);
         item3 = new Item("Milk", 0.69, 3, false);
@@ -76,7 +78,7 @@ public class ShoppingBasketTest {
         basket.addItem(item2);
         basket.addItem(item3);
         assertEquals(22.17, basket.basketValue());
-        assertEquals(21.73, basket.loyaltyCardDiscount());
+        assertEquals(21.73, discounter.loyaltyCardDiscount(basket.basketValue()));
     }
 
     @Test
@@ -86,7 +88,7 @@ public class ShoppingBasketTest {
         basket.addItem(item3);
         basket.addItem(item4);
         assertEquals(31.16, basket.basketValue());
-        assertEquals(30.54, basket.loyaltyCardDiscount());
+        assertEquals(30.54, discounter.loyaltyCardDiscount(basket.basketValue()));
     }
 
 }
